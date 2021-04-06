@@ -52,7 +52,7 @@ function buildPlots(sample) {
   //     marker: {
   //       size: otu_ids.slice(0,10).map(otuID => `OTU ${otuID}`).reverse(),
   //       color: sample_values.slice(0,10).reverse(),
-  //       // colorscale: [[0, '#4b4ba9'], [.2, '#54d2b0'],[.2, '#7fe36b'],[.5, '#c0ea6e'],[.5, '#99752b'],[1, '#d7c7b9']]
+  //       colorscale: [[0, '#4b4ba9'], [.2, '#54d2b0'],[.2, '#7fe36b'],[.5, '#c0ea6e'],[.5, '#99752b'],[1, '#d7c7b9']]
   //     }
   // };
   // var data = [trace1];  
@@ -81,9 +81,16 @@ function init() {
   });
 }
 
-function other_ids(other_sample) {
+function optionChanged(other_sample) {
+  console.log("in optionChanged");
   buildPlots(other_sample); 
   buildData(other_sample);
+  
 }
 
+
 init();
+
+
+
+
