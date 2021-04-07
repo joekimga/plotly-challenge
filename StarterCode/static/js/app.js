@@ -44,23 +44,23 @@ function buildPlots(sample) {
 
     
     // Bubble chart
-  //   var trace1 = {
-  //     x: sample_values.slice(0,10).reverse(),
-  //     y: otu_ids.slice(0,10).map(otuID => `OTU ${otuID}`).reverse(),
-  //     text: otu_labels.slice(0,10).reverse(),
-  //     mode: 'markers',
-  //     marker: {
-  //       size: otu_ids.slice(0,10).map(otuID => `OTU ${otuID}`).reverse(),
-  //       color: sample_values.slice(0,10).reverse(),
-  //       colorscale: [[0, '#4b4ba9'], [.2, '#54d2b0'],[.2, '#7fe36b'],[.5, '#c0ea6e'],[.5, '#99752b'],[1, '#d7c7b9']]
-  //     }
-  // };
-  // var data = [trace1];  
-  // var layout = {
-  //     xaxis: {title: 'OTU ID'},
-  //     showlegend: false,
-  // };
-  // Plotly.newPlot('bubble', data, layout);
+    var trace1 = {
+      y: sample_values,
+      x: otu_ids,
+      text: otu_labels,
+      mode: 'markers',
+      marker: {
+        color: otu_ids,
+        size: sample_values,
+        colorscale: [[0, '#4b4ba9'], [.2, '#54d2b0'],[.2, '#7fe36b'],[.5, '#c0ea6e'],[.5, '#99752b'],[1, '#d7c7b9']]
+      }
+  };
+  var data = [trace1];  
+  var layout = {
+      xaxis: {title: 'OTU ID'},
+      showlegend: false,
+  };
+  Plotly.newPlot('bubble', data, layout);
   //////////// End of Bubble  /////////////////
 
 
