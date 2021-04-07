@@ -1,0 +1,10 @@
+body {background-image: url(https://s.abcnews.com/images/Health/180405_atm_bacteria_16x9_992.jpg);background-position: center center; background-size:cover; background-repeat: no-repeat; min-height: 100%;}
+
+.jumbotron {background-image: url(https://westlabblogcanada.files.wordpress.com/2018/01/labequipment_webbanner-copy.jpg?w=680&h=255);background-position: center center; background-size:cover; background-repeat: no-repeat; min-height: 100%; border: 1px solid;}
+
+h1, p {font-weight: bold;}
+
+.well {border: 1px solid}
+
+.panel{border: 1px solid}
+
