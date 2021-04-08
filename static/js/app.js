@@ -63,6 +63,51 @@ function buildPlots(sample) {
   Plotly.newPlot('bubble', data, layout);
   //////////// End of Bubble  /////////////////
 
+  ///////// GAUGE  //////////////
+  var gauge = [
+    {
+      domain: { x: otu_ids, y: sample_values },
+      value: 940,
+      title: { text: "Belly Button Washing Frequency" },
+      subtitle: { text: "Scrubs per Week"},
+      type: "indicator",
+      mode: "gauge+number+delta",
+      delta: { reference: 380 },
+      gauge: {
+        axis: { range: [null, 9] },
+        steps: [
+          { range: [0, 1], color: "lightgray"},
+          { range: [1, 2], color: "gray" },
+          { range: [2, 3], color: "lightgray" },
+          { range: [3, 4], color: "gray" },
+          { range: [4, 5], color: "lightgray" },
+          { range: [5, 6], color: "gray" },
+          { range: [6, 7], color: "lightgray" },
+          { range: [7, 8], color: "gray" },
+          { range: [8, 9], color: "lightgray" }
+        
+        ],
+        threshold: {
+          line: { color: "red", width: 4 },
+          thickness: 0.75,
+          value: 490
+        }
+      }
+    }
+  ];
+  
+  var gauge_layout = { width: 600, height: 450, margin: { t: 0, b: 0 } };
+  Plotly.newPlot('gauge', gauge, gauge_layout);
+
+
+
+
+
+
+
+
+
+
 
   }); 
 }
