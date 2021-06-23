@@ -74,6 +74,8 @@ function buildPlots(sample) {
   // var wfreq_values = outputWfreq.wfreq_values;
   // var wfreq = outputWfreq.wfreq;
   console.log(wfreq);
+  // var wfreqAvg = wfreq;
+  // console.log(wfreqAvg);
 
   var gauge = [
     {
